@@ -1,259 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flower Shop</title>
-  <style>
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background-color: #fff;
-      padding: 20px;
-    }
-    nav {
-      background-color: #2a5d84;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-    nav li {
-      margin: 0 15px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:focus,
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    section > h1,
-    section > h2,
-    section > h3,
-    section > h4,
-    section > h5,
-    section > h6 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      color: #2a5d84;
-    }
-    p {
-      margin-bottom: 15px;
-      text-align: justify;
-    }
-    form {
-      background-color: #f5f5f5;
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin-top: 20px;
-      max-width: 600px;
-    }
-    fieldset {
-      border: none;
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    input[type="text"],
-    select {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #999;
-      border-radius: 4px;
-    }
-    input[type="radio"],
-    input[type="checkbox"] {
-      margin-right: 5px;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    button[type="submit"] {
-      background-color: #2a5d84;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    button[type="submit"]:hover,
-    button[type="submit"]:focus {
-      background-color: #1f4561;
-    }
-    .images {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .images img {
-      max-width: 30%;
-      height: auto;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blossom Flower Shop</title>
+    <style>
+      /* Base styles */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      header,
+      nav,
+      section,
+      footer,
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1em;
+      }
+      /* Navigation styles */
+      nav {
+        background-color: #006400;
+        padding: 1em;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 1em;
+        font-size: 1.1em;
+      }
+      nav a:focus,
+      nav a:hover {
+        text-decoration: underline;
+      }
+      /* Section styles */
+      section {
+        background-color: #fff;
+        margin-bottom: 1em;
+        padding: 1em;
+        border-radius: 5px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #2e8b57;
+      }
+      p {
+        margin-bottom: 1em;
+      }
+      /* Form styles */
+      form {
+        background-color: #eef;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      form fieldset {
+        border: none;
+        padding: 0;
+      }
+      form legend {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+      }
+      form label {
+        display: block;
+        margin: 0.5em 0 0.2em;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 0.5em;
+      }
+      input[type="submit"] {
+        background-color: #2e8b57;
+        color: #fff;
+        border: none;
+        padding: 0.7em;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover,
+      input[type="submit"]:focus {
+        background-color: #006400;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 0.5em 0;
+      }
+      footer {
+        text-align: center;
+        padding: 1em;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <!-- Home Section (4 Headings) -->
+      <section id="home" aria-labelledby="home-heading">
+        <h1 id="home-heading">Welcome to Blossom Flower Shop</h1>
+        <p>
+          Our flower shop offers a delightful escape into nature’s beauty. We
+          proudly showcase a wide assortment of blooms that rejuvenate your day.
+          Every arrangement is crafted with passion and expert care to brighten
+          your surroundings. The vibrant colors of our flowers create an
+          inviting atmosphere in any space. We offer seasonal specials that reflect
+          nature’s cycle and charm. Our displays pay homage to the art of floristry.
+          Customers enjoy personalized service that attends to every detail.
+          We celebrate the uniqueness of each flower and its story. Our collections
+          blend tradition with modern trends for a captivating aesthetic. Every visit
+          promises a memorable, sensory experience.
+        </p>
 
-  <!-- Home Section -->
-  <section id="home" aria-labelledby="home-heading">
-    <h1 id="home-heading">Welcome to Our Flower Shop</h1>
-    <p>
-      This is sentence 1 for Welcome to Our Flower Shop. This is sentence 2 for Welcome to Our Flower Shop. This is sentence 3 for Welcome to Our Flower Shop. This is sentence 4 for Welcome to Our Flower Shop. This is sentence 5 for Welcome to Our Flower Shop. This is sentence 6 for Welcome to Our Flower Shop. This is sentence 7 for Welcome to Our Flower Shop. This is sentence 8 for Welcome to Our Flower Shop. This is sentence 9 for Welcome to Our Flower Shop. This is sentence 10 for Welcome to Our Flower Shop.
-    </p>
+        <h2>Discover New Arrivals</h2>
+        <p>
+          New arrivals are celebrated with freshness and vibrant energy. Daily
+          shipments ensure that every bloom bursts with life and color. Our selection
+          is carefully curated by experts who value quality and beauty. Each new batch
+          invites exploration of unique textures and arrangements. The excitement of
+          discovery fills our shop with inspiration and creativity. We take pride in
+          offering exclusive seasonal varieties. Customers can find surprises in every
+          visit during the changing seasons. New blooms are artfully showcased to
+          uplift the spirit. Our commitment to excellence creates a lively atmosphere.
+          Every arrival is a promise of quality and nature’s wonder.
+        </p>
 
-    <h2>Fresh Blooms Every Day</h2>
-    <p>
-      This is sentence 1 for Fresh Blooms Every Day. This is sentence 2 for Fresh Blooms Every Day. This is sentence 3 for Fresh Blooms Every Day. This is sentence 4 for Fresh Blooms Every Day. This is sentence 5 for Fresh Blooms Every Day. This is sentence 6 for Fresh Blooms Every Day. This is sentence 7 for Fresh Blooms Every Day. This is sentence 8 for Fresh Blooms Every Day. This is sentence 9 for Fresh Blooms Every Day. This is sentence 10 for Fresh Blooms Every Day.
-    </p>
+        <h3>Featured Bouquets</h3>
+        <p>
+          Our featured bouquets highlight the artistry of our florists. Every bouquet
+          is a unique masterpiece designed to evoke emotions and memories. The
+          careful blending of colors transforms each arrangement into art. Clients find
+          that every featured piece tells its own story of nature and beauty. The
+          arrangement process prioritizes intricate detail and precision. Creativity
+          flows into every bouquet, making each one distinctive. Our featured selections
+          make perfect gifts for loved ones. They are designed to celebrate special
+          moments with grace. The curated displays satisfy both tradition and modernity.
+          Our featured bouquets inspire and captivate all who see them.
+        </p>
 
-    <h3>Quality and Care</h3>
-    <p>
-      This is sentence 1 for Quality and Care. This is sentence 2 for Quality and Care. This is sentence 3 for Quality and Care. This is sentence 4 for Quality and Care. This is sentence 5 for Quality and Care. This is sentence 6 for Quality and Care. This is sentence 7 for Quality and Care. This is sentence 8 for Quality and Care. This is sentence 9 for Quality and Care. This is sentence 10 for Quality and Care.
-    </p>
+        <h4>Petal Perfection</h4>
+        <p>
+          Every petal in our arrangements is selected for its vibrant beauty. The
+          symmetry of colors and textures defines the elegance of our designs. Expert
+          florists attend to each detail with care and precision. Our passion is reflected
+          in the graceful flow of each bouquet’s design. We celebrate nature’s smallest
+          details with dedication and love. Each display radiates a charm that is both
+          subtle and grand. The meticulous arrangements evoke positive emotions.
+          Customers appreciate the thoughtfulness behind every design. Artistic vision
+          is expressed in every carefully arranged petal. Petal perfection is the soul of
+          our shop.
+        </p>
+      </section>
 
-    <h4>Visit Us Today</h4>
-    <p>
-      This is sentence 1 for Visit Us Today. This is sentence 2 for Visit Us Today. This is sentence 3 for Visit Us Today. This is sentence 4 for Visit Us Today. This is sentence 5 for Visit Us Today. This is sentence 6 for Visit Us Today. This is sentence 7 for Visit Us Today. This is sentence 8 for Visit Us Today. This is sentence 9 for Visit Us Today. This is sentence 10 for Visit Us Today.
-    </p>
-  </section>
+      <!-- About Section (4 Headings) -->
+      <section id="about" aria-labelledby="about-heading">
+        <h5 id="about-heading">About Blossom Flower Shop</h5>
+        <p>
+          Blossom Flower Shop is a community treasure with decades of experience.
+          We nurture relationships with every customer who walks through our door.
+          Our passion for flowers has blossomed into an art form celebrated by many.
+          The shop’s history is rooted in craftsmanship and genuine care.
+          Each arrangement tells a story of nature, tradition, and innovation.
+          Our team is consistently inspired by the beauty of the natural world.
+          We are dedicated to offering fresh, quality flowers for every occasion.
+          Our focus is on personalizing each service to meet your unique needs.
+          Every interaction is imbued with warmth and professionalism.
+          Our legacy is built on trust, creativity, and the celebration of beauty.
+        </p>
 
-  <!-- About Section -->
-  <section id="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">Our Story</h2>
-    <p>
-      This is sentence 1 for Our Story. This is sentence 2 for Our Story. This is sentence 3 for Our Story. This is sentence 4 for Our Story. This is sentence 5 for Our Story. This is sentence 6 for Our Story. This is sentence 7 for Our Story. This is sentence 8 for Our Story. This is sentence 9 for Our Story. This is sentence 10 for Our Story.
-    </p>
+        <h6>Our Eco-Friendly Promise</h6>
+        <p>
+          Sustainability is a core value at Blossom Flower Shop and guides our
+          everyday practices. We source our flowers from responsible local growers.
+          Environmental stewardship is demonstrated through ethical decision-making.
+          Our operations are designed to reduce waste and embrace green solutions.
+          Every purchase supports sustainable agriculture and local communities.
+          We prioritize recyclable materials and eco-friendly packaging.
+          Transparency in our sourcing reassures customers of our commitment.
+          Every team member is trained to uphold sustainable practices.
+          We continuously innovate to minimize our environmental impact.
+          Our eco-friendly promise fosters a healthier planet for generations to come.
+        </p>
 
-    <h3>Experienced Florists</h3>
-    <p>
-      This is sentence 1 for Experienced Florists. This is sentence 2 for Experienced Florists. This is sentence 3 for Experienced Florists. This is sentence 4 for Experienced Florists. This is sentence 5 for Experienced Florists. This is sentence 6 for Experienced Florists. This is sentence 7 for Experienced Florists. This is sentence 8 for Experienced Florists. This is sentence 9 for Experienced Florists. This is sentence 10 for Experienced Florists.
-    </p>
+        <h2>Meet Our Expert Team</h2>
+        <p>
+          Our team of expert florists creates magic with every bouquet and arrangement.
+          Years of experience combine with a passion for design to produce stunning work.
+          Each team member brings a unique perspective to the art of floristry.
+          Collaborative creativity is the foundation of our success.
+          Clients appreciate our team’s dedication to quality and detail.
+          Regular training and inspiration sessions keep our team ahead of trends.
+          The artisans’ expertise results in tailored arrangements that exceed
+          expectations.
+          Each project is approached with professionalism and a smile.
+          Our team works in harmony to provide a seamless customer experience.
+          Their commitment transforms every event and space into something special.
+        </p>
 
-    <h4>Sustainable Practices</h4>
-    <p>
-      This is sentence 1 for Sustainable Practices. This is sentence 2 for Sustainable Practices. This is sentence 3 for Sustainable Practices. This is sentence 4 for Sustainable Practices. This is sentence 5 for Sustainable Practices. This is sentence 6 for Sustainable Practices. This is sentence 7 for Sustainable Practices. This is sentence 8 for Sustainable Practices. This is sentence 9 for Sustainable Practices. This is sentence 10 for Sustainable Practices.
-    </p>
+        <h3>Celebrating Floral Artistry</h3>
+        <p>
+          Every bouquet is a celebration of natural artistry and creativity.
+          Our store doubles as a gallery showcasing the beauty of handcrafted designs.
+          Each floral arrangement is a tribute to the elegance of nature.
+          The artistic blending of colors and forms creates a sensory delight.
+          Our passion for design motivates us to push creative boundaries.
+          Customers are invited to explore innovative arrangements that tell a
+          story.
+          The fusion of art and nature is evident in every display.
+          We strive to inspire and evoke admiration with every floral piece.
+          Our creativity is boundless, evolving with every new season.
+          Celebrating floral artistry is central to our mission.
+        </p>
+      </section>
 
-    <h5>Community Engagement</h5>
-    <p>
-      This is sentence 1 for Community Engagement. This is sentence 2 for Community Engagement. This is sentence 3 for Community Engagement. This is sentence 4 for Community Engagement. This is sentence 5 for Community Engagement. This is sentence 6 for Community Engagement. This is sentence 7 for Community Engagement. This is sentence 8 for Community Engagement. This is sentence 9 for Community Engagement. This is sentence 10 for Community Engagement.
-    </p>
-  </section>
+      <!-- Services Section (4 Headings) -->
+      <section id="services" aria-labelledby="services-heading">
+        <h4 id="services-heading">Our Services</h4>
+        <p>
+          We offer a wide range of floral services designed to delight every
+          customer. Our expertise spans weddings, corporate events, and personalized
+          occasions. Every service is performed with creativity and meticulous care.
+          We ensure each event receives an exclusive touch that reflects its unique
+          character. Professional consultation guides you through our process.
+          Each bouquet is custom-made to accompany your special moments.
+          Our reliable service meets every need with punctuality and precision.
+          We value the trust placed in us and work to exceed expectations.
+          Our experienced team delivers both style and functionality.
+          Every service is designed to make your event truly unforgettable.
+        </p>
 
-  <!-- Services Section -->
-  <section id="services" aria-labelledby="services-heading">
-    <h1 id="services-heading">Wedding Arrangements</h1>
-    <p>
-      This is sentence 1 for Wedding Arrangements. This is sentence 2 for Wedding Arrangements. This is sentence 3 for Wedding Arrangements. This is sentence 4 for Wedding Arrangements. This is sentence 5 for Wedding Arrangements. This is sentence 6 for Wedding Arrangements. This is sentence 7 for Wedding Arrangements. This is sentence 8 for Wedding Arrangements. This is sentence 9 for Wedding Arrangements. This is sentence 10 for Wedding Arrangements.
-    </p>
+        <h5>Custom Bouquet Creation</h5>
+        <p>
+          Our custom bouquet service puts you in the creative driver’s seat.
+          Clients can select their favorite flowers and design an arrangement
+          that is uniquely theirs. A personal consultation ensures your vision is
+          captured flawlessly. Our florists combine expertise with artistic flair.
+          Custom designs are created with an eye for perfect balance and color.
+          Every bouquet is a delicate mix of imagination and precision.
+          The process is smooth, accessible, and interactive.
+          Each custom creation is a personalized masterpiece that reflects your
+          personality.
+          Your input guides our process from start to finish.
+          Custom bouquet creation is where dreams blossom into reality.
+        </p>
 
-    <h2>Corporate Events</h2>
-    <p>
-      This is sentence 1 for Corporate Events. This is sentence 2 for Corporate Events. This is sentence 3 for Corporate Events. This is sentence 4 for Corporate Events. This is sentence 5 for Corporate Events. This is sentence 6 for Corporate Events. This is sentence 7 for Corporate Events. This is sentence 8 for Corporate Events. This is sentence 9 for Corporate Events. This is sentence 10 for Corporate Events.
-    </p>
+        <h6>Event Decoration Expertise</h6>
+        <p>
+          We turn celebrations into captivating floral experiences with our event
+          decoration services. Expert designers curate themes that fit your occasion
+          perfectly. Every detail is considered to harmonize with the event’s mood.
+          Our service transforms spaces with stunning, tailored arrangements.
+          Your event becomes a canvas for natural beauty and modern design.
+          Our specialists work closely with you to execute a flawless vision.
+          Creative and practical approaches merge to deliver impressive decor.
+          The result is an atmosphere that enchants and inspires guests.
+          Detailed planning and execution underpin our success.
+          Event decoration expertise is our signature in making memories last.
+        </p>
 
-    <h3>Custom Bouquets</h3>
-    <p>
-      This is sentence 1 for Custom Bouquets. This is sentence 2 for Custom Bouquets. This is sentence 3 for Custom Bouquets. This is sentence 4 for Custom Bouquets. This is sentence 5 for Custom Bouquets. This is sentence 6 for Custom Bouquets. This is sentence 7 for Custom Bouquets. This is sentence 8 for Custom Bouquets. This is sentence 9 for Custom Bouquets. This is sentence 10 for Custom Bouquets.
-    </p>
+        <h2>Delivery & Consultation</h2>
+        <p>
+          Our delivery service ensures that your flowers arrive fresh and on time.
+          Professional care is taken with every arrangement during transit.
+          Consultations offer expert advice to choose the perfect floral design.
+          We tailor every order to match your style and event dynamics.
+          Our streamlined process guarantees satisfaction from start to finish.
+          Timely and efficient deliveries are our promise to every client.
+          Personalized consultations make your experience seamless and enjoyable.
+          We believe that every bloom should evoke joy and elegance.
+          Trust in our delivery and consultation to meet your every need.
+          The service embodies our commitment to quality and care.
+        </p>
+      </section>
 
-    <h4>Same-Day Delivery</h4>
-    <p>
-      This is sentence 1 for Same-Day Delivery. This is sentence 2 for Same-Day Delivery. This is sentence 3 for Same-Day Delivery. This is sentence 4 for Same-Day Delivery. This is sentence 5 for Same-Day Delivery. This is sentence 6 for Same-Day Delivery. This is sentence 7 for Same-Day Delivery. This is sentence 8 for Same-Day Delivery. This is sentence 9 for Same-Day Delivery. This is sentence 10 for Same-Day Delivery.
-    </p>
-  </section>
+      <!-- Contact Section (3 Headings) -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <h3 id="contact-heading">Contact Us</h3>
+        <p>
+          We welcome all inquiries and feedback from our cherished customers.
+          Our team is readily available to assist you with any questions.
+          Reach out to us for customized floral advice or service details.
+          Every message is approached with care and professionalism.
+          Personalized attention ensures clear and prompt communication.
+          Our communication channels are designed for accessibility.
+          Your satisfaction is our top priority in every interaction.
+          We take pride in effective and friendly customer service.
+          Every contact is an opportunity to grow and improve our craft.
+          Your voice is valued at Blossom Flower Shop.
+        </p>
 
-  <!-- Contact Section -->
-  <section id="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Get in Touch</h2>
-    <p>
-      This is sentence 1 for Get in Touch. This is sentence 2 for Get in Touch. This is sentence 3 for Get in Touch. This is sentence 4 for Get in Touch. This is sentence 5 for Get in Touch. This is sentence 6 for Get in Touch. This is sentence 7 for Get in Touch. This is sentence 8 for Get in Touch. This is sentence 9 for Get in Touch. This is sentence 10 for Get in Touch.
-    </p>
+        <h4>Visit Our Store</h4>
+        <p>
+          Our store is conveniently located and fully accessible to all visitors.
+          Browse our collections in an inviting and well-organized space.
+          The store is designed with clear signage and ample room for movement.
+          Visitors enjoy a friendly atmosphere and the scent of fresh blooms.
+          Detailed directions and parking facilities ensure a smooth visit.
+          The layout is thoughtfully designed for users with diverse needs.
+          Every element of our store prioritizes comfort and accessibility.
+          Our team is always ready to guide you personally.
+          Visiting our store is an opportunity to experience nature up close.
+          We invite you to immerse yourself in the beauty of flowers.
+        </p>
 
-    <h3>Inquiries and Feedback</h3>
-    <p>
-      This is sentence 1 for Inquiries and Feedback. This is sentence 2 for Inquiries and Feedback. This is sentence 3 for Inquiries and Feedback. This is sentence 4 for Inquiries and Feedback. This is sentence 5 for Inquiries and Feedback. This is sentence 6 for Inquiries and Feedback. This is sentence 7 for Inquiries and Feedback. This is sentence 8 for Inquiries and Feedback. This is sentence 9 for Inquiries and Feedback. This is sentence 10 for Inquiries and Feedback.
-    </p>
+        <h5>Get in Touch Online</h5>
+        <p>
+          Our online contact options are simple, accessible, and effective.
+          Reach out via our easy-to-use contact form for prompt assistance.
+          Digital communication is designed with clarity and ease of use.
+          Instant support is provided through our dedicated online service.
+          Every inquiry is met with personalized responses.
+          The online system is built on modern accessibility standards.
+          Your questions and order details are treated confidentially.
+          We value the opportunity to serve you in the digital space.
+          Connecting with us online is seamless and user focused.
+          We look forward to hearing from you and assisting your floral needs.
+        </p>
+      </section>
 
-    <h4>Visit Our Store</h4>
-    <p>
-      This is sentence 1 for Visit Our Store. This is sentence 2 for Visit Our Store. This is sentence 3 for Visit Our Store. This is sentence 4 for Visit Our Store. This is sentence 5 for Visit Our Store. This is sentence 6 for Visit Our Store. This is sentence 7 for Visit Our Store. This is sentence 8 for Visit Our Store. This is sentence 9 for Visit Our Store. This is sentence 10 for Visit Our Store.
-    </p>
+      <!-- Order Form Section (1 Heading) -->
+      <section id="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading">Place Your Order</h2>
+        <p>
+          Use the form below to place your order and let us craft a bouquet
+          tailored to your unique preferences. Every detail you provide helps us
+          create a floral masterpiece that reflects your vision. Our team reviews
+          each order with careful attention to ensure quality service.
+          Detailed input guarantees a personalized experience for every client.
+          The process is simple, accessible, and designed with your ease in mind.
+          Your feedback and preferences are invaluable to our creative process.
+          Experience a service that combines expertise with heartfelt care.
+          Every submission is handled confidentially and professionally.
+          Our order form is fully accessible and clearly labeled for your
+          convenience.
+          We appreciate your trust and look forward to delighting you with our flowers.
+        </p>
+        <form action="#" method="post" aria-describedby="form-description">
+          <fieldset>
+            <legend>Order Form</legend>
+            <label for="name">Your Name<span aria-hidden="true" style="color: red;"> *</span></label>
+            <input type="text" id="name" name="name" required aria-required="true" />
 
-    <!-- Contact Form -->
-    <form action="#" method="post" aria-labelledby="form-heading">
-      <h2 id="form-heading">Contact Form <span aria-hidden="true" style="color:red;">*</span></h2>
-      <fieldset class="form-group">
-        <label for="name">Name <span aria-hidden="true" style="color:red;">*</span></label>
-        <input type="text" id="name" name="name" required aria-required="true">
-      </fieldset>
-      <fieldset class="form-group">
-        <legend>Delivery Option <span aria-hidden="true" style="color:red;">*</span></legend>
-        <label for="standard">
-          <input type="radio" id="standard" name="delivery" value="standard" required aria-required="true"> Standard
-        </label>
-        <label for="express">
-          <input type="radio" id="express" name="delivery" value="express" required aria-required="true"> Express
-        </label>
-      </fieldset>
-      <fieldset class="form-group">
-        <label for="newsletter">
-          <input type="checkbox" id="newsletter" name="newsletter"> Subscribe to our newsletter
-        </label>
-      </fieldset>
-      <fieldset class="form-group">
-        <label for="favorite-flower">Favorite Flower <span aria-hidden="true" style="color:red;">*</span></label>
-        <select id="favorite-flower" name="favorite-flower" required aria-required="true">
-          <option value="">--Select a Flower--</option>
-          <option value="tulips">Tulips</option>
-          <option value="roses">Roses</option>
-          <option value="lilies">Lilies</option>
-        </select>
-      </fieldset>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+            <p>Please select your preferred delivery option:</p>
+            <label>
+              <input type="radio" name="delivery" value="standard" required aria-required="true" />
+              Standard Delivery
+            </label>
+            <label>
+              <input type="radio" name="delivery" value="express" required aria-required="true" />
+              Express Delivery
+            </label>
 
-  <!-- Images Section -->
-  <section aria-labelledby="images-heading">
-    <h2 id="images-heading" style="margin-bottom:15px;">Our Bouquets</h2>
-    <div class="images">
-      <img src="tulips.png" alt="Bouquet of Tulips">
-      <img src="roses.png" alt="Bouquet of Roses">
-      <img src="lilies.png" alt="Bouquet of Lilies">
-    </div>
-  </section>
-</body>
+            <label for="newsletter">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              Subscribe to our newsletter for exclusive offers
+            </label>
+
+            <label for="flower-type">Choose Your Favorite Flower</label>
+            <select id="flower-type" name="flower-type">
+              <option value="tulips">Tulips</option>
+              <option value="roses">Roses</option>
+              <option value="lilies">Lilies</option>
+            </select>
+
+            <input type="submit" value="Submit Order" />
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- Gallery Section with Images (1 Heading) -->
+      <section id="gallery" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">Our Flower Gallery</h2>
+        <p>
+          Explore our online gallery featuring nature’s most enchanting blooms.
+          The selection includes tulips, roses, and lilies in all their beauty.
+          Each image is accompanied by descriptive text to ensure clarity.
+          Our gallery is designed with attention to accessibility and detail.
+          The photographs capture the vibrant hues and delicate features of every petal.
+          Our curated collection inspires creativity and a passion for nature.
+          Every image tells a story of craftsmanship and dedication.
+          Clear visuals make it easy to appreciate the artistry of each bouquet.
+          The gallery embodies our commitment to quality and aesthetics.
+          Enjoy a glimpse into the soulful world of Blossom Flower Shop.
+        </p>
+        <img src="tulips.png" alt="A bouquet of vibrant tulips" />
+        <img src="roses.png" alt="A bouquet of elegant roses" />
+        <img src="lilies.png" alt="A bouquet of beautiful lilies" />
+      </section>
+    </main>
+    <footer>
+      <p>© 2023 Blossom Flower Shop. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
